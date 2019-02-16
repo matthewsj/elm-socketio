@@ -1,10 +1,10 @@
 {
     "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
-    "license": "BSD3",
+    "summary": "Example of using Elm 0.19 with socket.io",
+    "repository": "https://github.com/matthewsj/elm-socketio.git",
+    "license": "MIT",
     "source-directories": [
-        "."
+        "src/client/elm"
     ],
     "exposed-modules": [],
     "dependencies": {

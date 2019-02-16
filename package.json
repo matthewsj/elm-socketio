@@ -12,6 +12,7 @@
   },
   "author": "Jacob Matthews",
   "license": "MIT",
+  "repository": "https://github.com/matthewsj/elm-socketio.git",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.4",

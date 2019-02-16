@@ -25,6 +25,16 @@ subscriptions model =
     receiveMessage ReceivedChat
 
 
+port sendMessage : String -> Cmd msg
+
+
+port receiveMessage : (String -> msg) -> Sub msg
+
+
+
+-- MODEL
+
+
 type alias Model =
     { messages : List String
     , draft : String
@@ -38,6 +48,10 @@ init _ =
       }
     , Cmd.none
     )
+
+
+
+-- UPDATE
 
 
 type Msg
@@ -61,6 +75,10 @@ update msg model =
             )
 
 
+
+-- VIEW
+
+
 view : Model -> Html Msg
 view model =
     div []
@@ -70,9 +88,3 @@ view model =
             , button [ onClick SendChat ] [ text "Send" ]
             ]
         ]
-
-
-port sendMessage : String -> Cmd msg
-
-
-port receiveMessage : (String -> msg) -> Sub msg
