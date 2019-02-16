@@ -26,7 +26,7 @@ $ npm run dev
 
 This should start an express server that handles websockets and open a browser
 window on localhost port 4000 with a chat box. Open the same URL multiple times
-to see chat in action.
+and you'll see that sending a chat from any client broadcasts to all of them.
 
 ## Credits
 
