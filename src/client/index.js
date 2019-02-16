@@ -1,12 +1,11 @@
-'use strict';
+import './index.html';
 
-require('./index.html');
-var Elm = require('./elm/Main.elm').Elm;
+import { Elm } from './elm/Main.elm';
 
-var app = Elm.Main.init({
+const app = Elm.Main.init({
   node: document.getElementById('elm')
 });
-var socket = io();
+const socket = io();
 app.ports.sendMessage.subscribe(function(message) {
   socket.emit('chat message', message);
 });

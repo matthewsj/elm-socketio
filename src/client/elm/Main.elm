@@ -71,7 +71,11 @@ update msg model =
 
         SendChat ->
             ( { model | draft = "" }
-            , sendMessage model.draft
+            , if model.draft == "" then
+                Cmd.none
+
+              else
+                sendMessage model.draft
             )
 
 

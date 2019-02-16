@@ -14,8 +14,7 @@ includes an example build system based on [npm](https://www.npmjs.com/) and
 
 ## Quickstart
 
-You need to have already installed Node.js on your system. Clone this repository
-and from the root directory:
+You need to have already installed Node.js on your system. From a terminal, run:
 
 ```
 $ git clone https://github.com/matthewsj/elm-socketio
@@ -27,6 +26,16 @@ $ npm run dev
 This should start an express server that handles websockets and open a browser
 window on localhost port 4000 with a chat box. Open the same URL multiple times
 and you'll see that sending a chat from any client broadcasts to all of them.
+
+For a production build, run:
+
+```
+$ npm run build
+$ npm run start
+```
+
+This will start a server on localhost:3000 that serves the client assets at `/`
+and handles websocket connections for them.
 
 ## Credits
 
